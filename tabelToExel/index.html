@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./assets/js/table2excel.js"></script>
+</head>
+<body>
+    <h1>Planilha Exemplo</h1>
+    <table id="tabelaExcel">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abnice Maria </td>
+                <td>11987538845</td>
+                <td>29/11/1984</td>
+            </tr>
+            <tr>
+                <td>Adilane leon</td>
+                <td>11987538845</td>
+                <td>29/11/1984</td>
+            </tr>
+            <tr>
+                <td>Adilza Maria Linhares</td>
+                <td>11987538845</td>
+                <td>29/11/1984</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button id="btnDownload">Download</button>
+    <script>
+        document.getElementById('btnDownload').addEventListener('click', function() {
+            var table2excel = new Table2Excel();
+            table2excel.export(document.querySelectorAll("#tabelaExcel"));
+        })
+    </script>
+</body>
+</html>
